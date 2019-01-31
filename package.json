@@ -1,0 +1,26 @@
+{
+  "name": "just-animate-3-docs",
+  "version": "3.0.0",
+  "description": "Documentation for Just Animate 3",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "vuepress": "^0.14.8"
+  },
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/just-animate/just-animate.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/just-animate/just-animate/issues"
+  },
+  "homepage": "https://github.com/just-animate/just-animate#readme"
+}
