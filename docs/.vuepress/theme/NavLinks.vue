@@ -104,10 +104,6 @@ export default {
   a {
     line-height: 1.4rem;
     color: inherit;
-
-    &:hover, &.router-link-active {
-      color: $accentColor;
-    }
   }
 
   .nav-item {
@@ -131,12 +127,7 @@ export default {
   }
 }
 
-@media (min-width: $MQMobile) {
-  .nav-links a {
-    &:hover, &.router-link-active {
-      color: $textColor;
-    }
-  }
+@media (min-width: $MQMobile) { 
 
   .nav-item > a:not(.external) {
     &:hover, &.router-link-active {

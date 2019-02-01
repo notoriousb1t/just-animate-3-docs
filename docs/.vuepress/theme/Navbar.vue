@@ -43,10 +43,8 @@ export default {
 <style lang="stylus">
 @import './styles/config.styl';
 
-$navbar-bg = black;
-$navbar-fg = white; 
-
-
+$navbar-bg = #111;
+$navbar-fg = #fefefe; 
 
 .navbar {
   padding: 0.7rem 1.5rem;

@@ -1,5 +1,6 @@
 {
     "stylusSupremacy.insertSemicolons": true,
     "stylusSupremacy.insertBraces": true,
-    "stylusSupremacy.alwaysUseAtBlock": true
+    "stylusSupremacy.alwaysUseAtBlock": true,
+    "editor.tabSize": 2
 }

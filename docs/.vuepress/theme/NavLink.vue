@@ -15,7 +15,7 @@
     {{ item.text }}
     <OutboundLink/>
   </a>
-</template>
+</template> 
 
 <script>
 import { isExternal, isMailto, isTel, ensureExt } from "./util";

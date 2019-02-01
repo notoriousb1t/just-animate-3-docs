@@ -29,9 +29,6 @@ module.exports = {
     nav: [{
       text: "Guide",
       link: "/guide.md"
-    }, {
-      text: "API",
-      link: "/guide.md#api"
     }],
     // Assumes GitHub. Can also be a full GitLab url.
     repo: "just-animate/just-animate/",
