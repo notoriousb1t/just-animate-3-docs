@@ -1,7 +1,7 @@
 module.exports = {
   title: "Just Animate 3",
   description: "Making Animation Simple",
-  base: "/",
+  base: "/just-animate-3-docs",
   ga: "UA-6412794-8",
   head: [
     ["meta", {
