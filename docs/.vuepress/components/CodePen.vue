@@ -1,24 +1,24 @@
-<template lang="html">
-<div class="codepen-wrapper" :style="{ height: height }">
+<template lang='html'>
+<div class='codepen-wrapper' :style='{ height: height }'>
   <div
-    class="codepen"
-    :data-height="height"
-    data-theme-id="dark"
-    data-default-tab="js,result"
-    data-editable="true"
-    data-preview="true"
-    data-user="notoriousb1t"
-    data-slug-hash="7ceecf00069895a2fa5de627e88df4f6"
-    data-prefill='{"tags":["just-animate-3"],
-    "scripts":["https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js"
-    ]}'>
-<template v-if="mode === 'left-to-right'">
-<pre data-lang="html">
-&lt;div class="alley">
-  &lt;div class="box">&lt;/div>
+    class='codepen'
+    :data-height='height'
+    data-theme-id='dark'
+    data-default-tab='js,result'
+    data-editable='true'
+    data-preview='true'
+    data-user='notoriousb1t'
+    data-slug-hash='7ceecf00069895a2fa5de627e88df4f6'
+    data-prefill="{'tags':['just-animate-3'],
+    'scripts':['https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js'
+    ]}">
+<template v-if='mode === "left-to-right"'>
+<pre data-lang='html'>
+&lt;div class='alley'>
+  &lt;div class='box'>&lt;/div>
 &lt;/div>
 </pre>
-<pre data-lang="scss" data-option-autoprefixer>
+<pre data-lang='scss' data-option-autoprefixer>
 * {
    box-sizing: border-box;
    position: relative;
@@ -49,11 +49,11 @@ body {
 </pre>
 </template>
 
-<template v-if="mode === 'middle'">
-<pre data-lang="html">
-&lt;div class="box">&lt;/div>
+<template v-if='mode === "middle"'>
+  <pre data-lang="html">
+&lt;div class='box'>&lt;/div>
 </pre>
-<pre data-lang="scss" data-option-autoprefixer>
+  <pre data-lang="scss" data-option-autoprefixer>
 * {
    box-sizing: border-box;
    position: relative;
@@ -103,7 +103,7 @@ export default {
       type: Number
     },
     mode: {
-      default: '',
+      default: "",
       type: String
     }
   },
