@@ -9,9 +9,7 @@
     data-preview='true'
     data-user='notoriousb1t'
     data-slug-hash='7ceecf00069895a2fa5de627e88df4f6'
-    data-prefill="{'tags':['just-animate-3'],
-    'scripts':['https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js'
-    ]}">
+    :data-prefill="prefill">
 <template v-if='mode === "left-to-right"'>
 <pre data-lang='html'>
 &lt;div class='alley'>
@@ -102,10 +100,26 @@ export default {
       default: 280,
       type: Number
     },
+    tags: {
+      default: ["just-animate-3"],
+      type: Array
+    },
+    scripts: {
+      default: [
+        "https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js"
+      ],
+      type: Array
+    },
     mode: {
       default: "",
       type: String
     }
+  },
+  computed: {
+      prefill() {
+          const { tags, scripts } = this;
+          return JSON.stringify({ tags, scripts });
+      }
   },
   mounted() {
     if (!scriptEl) {
