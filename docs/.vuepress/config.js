@@ -27,8 +27,17 @@ module.exports = {
   ],
   themeConfig: {
     nav: [{
-      text: "Guide",
+      text: "Getting Started",
       link: "/guide.md"
+    },
+    {
+      text: "API",
+      items: [
+        {
+          text: "Eases",
+          link: "/api/eases.md"
+        }
+      ]
     }],
     // Assumes GitHub. Can also be a full GitLab url.
     repo: "just-animate/just-animate/",
