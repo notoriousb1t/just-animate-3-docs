@@ -3,13 +3,13 @@
   <div
     class='codepen'
     :data-height='height'
+    :data-default-tab='defaultTabs'
+    :data-prefill="prefill"
+    :data-editable='editable'
     data-theme-id='dark'
-    data-default-tab='js,result'
-    data-editable='true'
     data-preview='true'
     data-user='notoriousb1t'
-    data-slug-hash='7ceecf00069895a2fa5de627e88df4f6'
-    :data-prefill="prefill">
+    data-slug-hash='7ceecf00069895a2fa5de627e88df4f6'>
 <template v-if='mode === "left-to-right"'>
 <pre data-lang='html'>
 &lt;div class='alley'>
@@ -29,6 +29,7 @@ body {
    font-family: Roboto, sans-serif;
    font-size: 12px;
    height: 100vh;
+   margin: 0;
    overflow: hidden;
 }
 .alley {
@@ -101,14 +102,22 @@ export default {
       type: Number
     },
     tags: {
-      default: ["just-animate-3"],
+      default: () => ["just-animate-3"],
       type: Array
     },
     scripts: {
-      default: [
+      default: () => [
         "https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js"
       ],
       type: Array
+    },
+    editable: {
+      default: true,
+      type: Boolean
+    },
+    defaultTabs: {
+      default: "js,result",
+      type: String
     },
     mode: {
       default: "",
@@ -116,10 +125,10 @@ export default {
     }
   },
   computed: {
-      prefill() {
-          const { tags, scripts } = this;
-          return JSON.stringify({ tags, scripts });
-      }
+    prefill() {
+      const { tags, scripts } = this;
+      return JSON.stringify({ tags, scripts });
+    }
   },
   mounted() {
     if (!scriptEl) {
