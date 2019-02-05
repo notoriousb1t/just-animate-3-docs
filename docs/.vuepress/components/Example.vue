@@ -94,15 +94,16 @@ body {
   border-radius: 6px;
   color: #efefef;
 }
-.codepen [data-lang='html'],
-.codepen [data-lang='scss'] {
+.codepen [data-lang="html"],
+.codepen [data-lang="scss"] {
   /* Hide html and scss until codepen loads. */
   display: none;
 }
 </style>
 
 <script>
-let scriptEl;
+let taskId = 0;
+let isCodePenLoaded = false;
 export default {
   props: {
     height: {
@@ -139,10 +140,24 @@ export default {
     }
   },
   mounted() {
+    let scriptEl = document.getElementById("codepenLoader");
     if (!scriptEl) {
+      // Load script if not loaded.
       scriptEl = document.createElement("script");
+      scriptEl.id = "codepenLoader";
       scriptEl.src = "https://static.codepen.io/assets/embed/ei.js";
+      scriptEl.onload = () => { isCodePenLoaded = true; };
       document.head.appendChild(scriptEl);
+    } else {
+      // Otherwise schedule an update of .codepen elements.
+      // We need to do this in case a pjax update has swapped out contents.
+      if (isCodePenLoaded) {
+        taskId ||
+          requestAnimationFrame(() => {
+            taskId = 0;
+            window.__CPEmbed(".codepen");
+          });
+      }
     }
   }
 };
