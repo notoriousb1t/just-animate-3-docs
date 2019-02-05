@@ -1,5 +1,5 @@
 <template lang='html'>
-<div class='codepen-wrapper' :style='{ height: height }'>
+<div class='example-wrapper' :style='{ height: height }'>
   <div
     class='codepen'
     :data-height='height'
@@ -88,8 +88,16 @@ body {
   /* Hide the html button. */
   display: none;
 }
-.codepen-wrapper {
+.example-wrapper {
+  /* Styles for if embeds don't work. */
   background: #222;
+  border-radius: 6px;
+  color: #efefef;
+}
+.codepen [data-lang='html'],
+.codepen [data-lang='scss'] {
+  /* Hide html and scss until codepen loads. */
+  display: none;
 }
 </style>
 

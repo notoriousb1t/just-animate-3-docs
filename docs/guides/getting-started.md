@@ -26,18 +26,18 @@ The Fluent Syntax is used throughout much of the documentation because it is con
 *Shorthand Syntax*
 The shorthand syntax is useful for transition or fire-and-forget animations. The following code constructs a Timeline (which autoplays) and adds a keyframe at 1 second to change the opacity to 0.2.
 
-<CodePen mode="middle" :height="200">
+<Example mode="middle" :height="200">
 <pre data-lang="js">
 just.animate(".box", 1000, { 
    transform: 'rotate(360deg)'
 });
 </pre>
-</CodePen>
+</Example>
 
 *Longhand Syntax*
 The longhand syntax is to construct a new Timeline and then call animate to configure the first tween. This syntax allows the Timeline to be configured at the same time as creation. the `.configure()` can also be used at any time to change the configuration.
 
-<CodePen mode="middle" :height="240">
+<Example mode="middle" :height="240">
 <pre data-lang="js">
 const t1 = 
   new just.Timeline({ 
@@ -47,13 +47,13 @@ const t1 =
     transform: 'rotate(360deg)'
   });
 </pre>
-</CodePen>
+</Example>
 
 
 ### JSON Syntax
 The JSON Syntax is useful for setting and replacing a timeline's configuration wholesale. It is most useful when programmatically updating a Timeline through automation or tooling.
 
-<CodePen mode="middle" :height="320">
+<Example mode="middle" :height="320">
 <pre data-lang="js">
 new just.Timeline({
   keyframes: {
@@ -65,7 +65,7 @@ new just.Timeline({
   }
 }).update()
 </pre>
-</CodePen>
+</Example>
 
 ## Installation
 
