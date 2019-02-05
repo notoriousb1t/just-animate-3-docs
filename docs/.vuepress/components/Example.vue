@@ -78,6 +78,47 @@ body {
 </pre>
 </template>
 
+<template v-if='mode === "three-boxes"'>
+
+<pre data-lang='html'>
+&lt;div class='alley'>
+  &lt;div class='box'>&lt;/div>
+  &lt;div class='box'>&lt;/div>
+  &lt;div class='box'>&lt;/div>
+&lt;/div>
+</pre>
+<pre data-lang='scss' data-option-autoprefixer>
+* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+   margin: 10px;
+}
+</pre>
+</template>
+
 <slot></slot>
   </div> 
   </div>

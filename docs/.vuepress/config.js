@@ -42,7 +42,11 @@ module.exports = {
         {
           text: "Eases",
           link: "/api/eases.md"
-        }
+        }, 
+        {
+          text: "Padding / Delays / Staggers",
+          link: "/api/pad.md"
+        },
       ]
     }],
     // Assumes GitHub. Can also be a full GitLab url.
