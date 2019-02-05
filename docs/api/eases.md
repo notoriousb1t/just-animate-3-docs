@@ -23,7 +23,7 @@ Back moves past the boundary and then back to the boundary. For "in" it moves be
 <pre data-lang="js">
 just.animate(".box", 1050, {
   transform: "translate(80vw)",
-  ease: "back(out)"
+  $ease: "back(out)"
 });
 </pre>
 </Example>
@@ -39,7 +39,7 @@ Bounce produces a bouncing effect.
 <pre data-lang="js">
 just.animate(".box", 1050, {
   transform: "translate(80vw)",
-  ease: "bounce(out)"
+  $ease: "bounce(out)"
 });
 </pre>
 </Example>
@@ -52,7 +52,7 @@ be produced with this function. See [cubic-bezier.com](http://cubic-bezier.com) 
 <pre data-lang="js">
 just.animate(".box", 1050, {
   transform: "translate(80vw)",
-  ease: "cubic-bezier(.5, 0, .5, 1)"
+  $ease: "cubic-bezier(.5, 0, .5, 1)"
 });
 </pre>
 </Example>
@@ -70,7 +70,7 @@ Elastic appears to be made of rubber.
 <pre data-lang="js">
 just.animate(".box", 1050, {
   transform: "translate(80vw)",
-  ease: "elastic(out)"
+  $ease: "elastic(out)"
 });
 </pre>
 </Example>
@@ -94,7 +94,7 @@ Instead of providing named 12+ named eases, it is nicer to simply provide a powe
 <pre data-lang="js">
 just.animate(".box", 1050, {
   transform: "translate(80vw)",
-  ease: "power(out, 3)"
+  $ease: "power(out, 3)"
 });
 </pre>
 </Example>
@@ -110,7 +110,7 @@ Repeat repeats a tween a certain number of times. While the Timeline has an `ite
 <pre data-lang="js">
 just.animate(".box", 1000, {
   transform: "translate(80vw)",
-  ease: "repeat(2)"
+  $ease: "repeat(2)"
 });
 </pre>
 </Example>
@@ -125,7 +125,7 @@ Sine is a gentle ease function.
 <pre data-lang="js">
 just.animate(".box", 1000, {
   transform: "translate(80vw)",
-  ease: "sine(out)"
+  $ease: "sine(out)"
 });
 </pre>
 </Example>
@@ -141,7 +141,7 @@ Cubic Bezier works the same way as it does in CSS: it has a number of steps and 
 <pre data-lang="js">
 just.animate(".box", 5000, {
   transform: "translate(80vw)",
-  ease: "steps(10, end)"
+  $ease: "steps(10, end)"
 });
 </pre>
 </Example>
@@ -157,7 +157,7 @@ Yoyo repeats and alternates a tween a certain number of times. While the Timelin
 <pre data-lang="js">
 just.animate(".box", 2000, {
   transform: "translate(80vw)",
-  ease: "yoyo(4)"
+  $ease: "yoyo(4)"
 });
 </pre>
 </Example>
@@ -169,13 +169,13 @@ Just Animate has the unique ability to chain eases. Add more than one ease expre
 <pre data-lang="js">
 just.animate(".box", 2000, {
   transform: "translate(80vw)",
-  ease: "yoyo(2) sine(in-out)"
+  $ease: "yoyo(2) sine(in-out)"
 });
 </pre>
 </Example>
 
 ## Custom Eases
-Registering a custom only requires adding a function to `eases`. The function should accept whatever arguments are needed to generate the ease function and then return an ease function in turn. Ease functions may be cached, so it is important that ease functions are pure and do not hand out different ease functions as a result of outside mutations. Here is an example of a custom power ease:
+Registering a custom only requires adding a function to `eases`. The function should accept whatever arguments are needed to generate the ease function and then return an ease function in turn. Ease functions may be cached, so it is important that ease functions are pure and do not hand out different ease functions as a result of outside mutations. Here is an example of a custom power $ease:
 
 <Example mode="left-to-right" :height="320">
 <pre data-lang="js">
@@ -187,7 +187,7 @@ just.eases.customPower = (n) => {
 
 just.animate(".box", 1050, {
   transform: "translate(80vw)",
-  ease: "customPower(7)"
+  $ease: "customPower(7)"
 });
 </pre>
 </Example>
@@ -202,7 +202,7 @@ just.eases.default = () => {
 
 just.animate(".box", 1050, {
   transform: "translate(80vw)",
-  ease: "default"
+  $ease: "default"
 });
 </pre>
 </Example>

@@ -24,12 +24,13 @@ Just Animate is a general purpose JavaScript animation library. It can animate H
 The Fluent Syntax is used throughout much of the documentation because it is concise and easy to read.
 
 *Shorthand Syntax*
-The shorthand syntax is useful for transition or fire-and-forget animations. The following code constructs a Timeline (which autoplays) and adds a keyframe at 1 second to change the opacity to 0.2.
+The shorthand syntax is useful for transition or fire-and-forget animations. The following code constructs a Timeline (which autoplays) and adds a keyframe at 1 second to spin the target by 360 degrees.
 
 <Example mode="middle" :height="200">
 <pre data-lang="js">
 just.animate(".box", 1000, { 
-   transform: 'rotate(360deg)'
+   transform: 'rotate(360deg)',
+   $ease: 'power(in-out, 2)'
 });
 </pre>
 </Example>
@@ -44,7 +45,8 @@ const t1 =
     // playState: 'paused' 
   })
   .animate(".box", 1000, { 
-    transform: 'rotate(360deg)'
+    transform: 'rotate(360deg)',
+    $ease: 'power(in-out, 2)'
   });
 </pre>
 </Example>
@@ -59,11 +61,14 @@ new just.Timeline({
   keyframes: {
     '.box': {
       transform: {
-        1000: { value: "rotate(360deg)" }
+        1000: {
+          value: "rotate(360deg)", 
+          $ease: 'power(in-out, 2)' 
+        }
       }
     }
   }
-}).update()
+});
 </pre>
 </Example>
 
