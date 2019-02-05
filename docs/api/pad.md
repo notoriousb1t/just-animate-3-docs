@@ -54,17 +54,18 @@ just.animate(".box", 1000, {
 </Example>
 
 ### Eased Staggering
-To stagger targets along a curve, add `$padStart` and pass in stagger with an ease and with a duration. In the example, each target is staggered over 90 milliseconds altogether.  The time is first divided evenly and then each target's time has the easing applied to it.
+To stagger targets along a curve, add `$padEnd` and pass in stagger with an ease and with a duration. In the example, each target is animated by a portion of the 300 milliseconds. The targets are distributed along a power(in) curve instead of evenly.
 
 <Example mode="three-boxes" :height="280">
 <pre data-lang="js">
 just.animate(".box", 1000, {
   transform: "translate(80vw)",
-  $padStart: { 
+  $padEnd: { 
     duration: 300, 
-    stagger: 'power(in-out, 4)' 
+    stagger: 'power(in)' 
   },
-  $ease: "bounce(out)"
+  $ease: 'bounce(out)'
 });
+
 </pre>
 </Example>
