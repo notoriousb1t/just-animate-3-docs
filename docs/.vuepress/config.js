@@ -26,9 +26,15 @@ module.exports = {
     }], 
   ],
   themeConfig: {
-    nav: [{
-      text: "Getting Started",
-      link: "/guide.md"
+    nav: [
+    {
+      text: "Guides",
+      items: [
+        {
+          text: "Getting Started",
+          link: "/guides/getting-started.md"
+        }
+      ]
     },
     {
       text: "API",

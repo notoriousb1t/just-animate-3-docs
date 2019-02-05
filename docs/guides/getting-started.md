@@ -13,15 +13,15 @@ Just Animate is a general purpose JavaScript animation library. It can animate H
 - Tweens all transform properties (rotate, translate, scale, etc.)
 - Morphs SVG paths
 - Sub-timelines with the ability to use Web Animation API Animations as sub-timelines
-- Full library of eases with [ease chaining](#ease-chaining) and [custom eases](#custom-eases)
+- Full library of eases with [ease chaining](/api/eases#ease-chaining) and [custom eases](/api/eases#custom-eases)
 - Swappable animation targets and swappable keyframes even while the animation is running
 - Fluent/builder and JSON API to provide a good experience for multiple programming styles
 - Built to perform well under a heavy load and provide a smooth experience
 
 ## Get Started
 
-### Fluent API
-The Fluent API is used throughout much of the documentation because it is concise and good for building step-by-step Timelines.
+### Fluent Syntax
+The Fluent Syntax is used throughout much of the documentation because it is concise and easy to read.
 
 *Shorthand Syntax*
 The shorthand syntax is useful for transition or fire-and-forget animations. The following code constructs a Timeline (which autoplays) and adds a keyframe at 1 second to change the opacity to 0.2.
@@ -50,8 +50,8 @@ const t1 =
 </CodePen>
 
 
-### JSON API
-The JSON API is useful for setting and replacing a timeline's configuration wholesale.
+### JSON Syntax
+The JSON Syntax is useful for setting and replacing a timeline's configuration wholesale. It is most useful when programmatically updating a Timeline through automation or tooling.
 
 <CodePen mode="middle" :height="320">
 <pre data-lang="js">

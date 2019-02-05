@@ -7,7 +7,7 @@ meta:
 ---
 
 ## Eases
-An ease allows the developer or designer the ability to change the rate at which the animation progresses. Having the right ease can be the difference between an unpleasant mechanical interaction or having a silky-smooth delightful interaction. Easings [can be chained](#ease-chaining) and [custom eases](#custom-eases) can be registered.
+An ease allows the developer or designer the ability to change the rate at which the animation progresses. Having the right ease can be the difference between an unpleasant mechanical interaction or having a silky-smooth delightful interaction. Eases [can be chained](#ease-chaining) and [custom eases](#custom-eases) can be registered.
 
 Just Animate comes pre-built with the most common eases, many of which are not available in CSS. 
 
@@ -45,7 +45,7 @@ just.animate(".box", 1050, {
 </CodePen>
 
 ### Cubic Bezier
-Cubic Bezier works the same way as it does in CSS: it has four control points that create a curve. Many easings can
+Cubic Bezier works the same way as it does in CSS: it has four control points that create a curve. Many eases can
 be produced with this function. See [cubic-bezier.com](http://cubic-bezier.com) to try some of your own.
 
 <CodePen mode="left-to-right" :height="220">
@@ -76,7 +76,7 @@ just.animate(".box", 1050, {
 </CodePen>
 
 ### Power
-Power provides many of the named easings that are often used in animation:
+Power provides many of the named eases that are often used in animation:
 
 1. power(in, 1) = linear
 1. power(in, 2) = easeInQuad
@@ -84,7 +84,7 @@ Power provides many of the named easings that are often used in animation:
 1. power(in, 4) = easeInQuart
 1. power(in, 5) = easeInQuint
 
-Instead of providing named 12+ named easings, it is nicer to simply provide a power function so the relationship between easings is clear and easy to move between. Try changing the number in the example to move between easings or better yet, create your own power easing!
+Instead of providing named 12+ named eases, it is nicer to simply provide a power function so the relationship between eases is clear and easy to move between. Try changing the number in the example to move between eases or better yet, create your own power ease!
 
 *Arguments*
 1. `type`: in, out, or in-out. The default value is in.
@@ -101,7 +101,7 @@ just.animate(".box", 1050, {
 
  
 ### Repeat
-Repeat repeats a tween a certain number of times. While the Timeline has an `iterations` property for repeating the timeline, the repeat easing allows a developer or designer to subdivide a tween into repetions. Eases do not affect duration, so if the goal is to play the tween twice for 500ms, set the tween duration to 1000 and repeat twice.
+Repeat repeats a tween a certain number of times. While the Timeline has an `iterations` property for repeating the timeline, the repeat ease allows a developer or designer to subdivide a tween into repetions. Eases do not affect duration, so if the goal is to play the tween twice for 500ms, set the tween duration to 1000 and repeat twice.
 
 *Arguments*
 1. `count`: The default value is 2.
@@ -148,7 +148,7 @@ just.animate(".box", 5000, {
 
 
 ### Yoyo
-Yoyo repeats and alternates a tween a certain number of times. While the Timeline has an `iterations` property for repeating the timeline and an `alternate` property to alternate, the yoyo easing allows a developer or designer to subdivide a tween into repetions that alternate. Eases do not affect duration, so if the goal is to move to a position and back 500ms in each direction, the developer or designer should set the duration to 1000 and yoyo twice.
+Yoyo repeats and alternates a tween a certain number of times. While the Timeline has an `iterations` property for repeating the timeline and an `alternate` property to alternate, the yoyo ease allows a developer or designer to subdivide a tween into repetions that alternate. Eases do not affect duration, so if the goal is to move to a position and back 500ms in each direction, the developer or designer should set the duration to 1000 and yoyo twice.
 
 *Arguments*
 1. `count`: The default value is 2.
@@ -163,7 +163,7 @@ just.animate(".box", 2000, {
 </CodePen>
 
 ## Ease Chaining
-Just Animate has the unique ability to chain eases. Add more than one ease expressions separated by spaces and Just Animate will take the result from each ease and process it through the next ease. This is especially helpful when using yoyo, repeat, or creating a complex easing.
+Just Animate has the unique ability to chain eases. Add more than one ease expressions separated by spaces and Just Animate will take the result from each ease and process it through the next ease. This is especially helpful when using yoyo, repeat, or creating a complex ease.
 
 <CodePen mode="left-to-right" :height="220">
 <pre data-lang="js">
@@ -175,7 +175,7 @@ just.animate(".box", 2000, {
 </CodePen>
 
 ## Custom Eases
-Registering a custom only requires adding a function to `eases`. The function should accept whatever arguments are needed to generate the easing function and then return an easing function in turn. Easing functions may be cached, so it is important that ease functions are pure and do not hand out different ease functions as a result of outside mutations. Here is an example of a custom power ease:
+Registering a custom only requires adding a function to `eases`. The function should accept whatever arguments are needed to generate the ease function and then return an ease function in turn. Ease functions may be cached, so it is important that ease functions are pure and do not hand out different ease functions as a result of outside mutations. Here is an example of a custom power ease:
 
 <CodePen mode="left-to-right" :height="320">
 <pre data-lang="js">
