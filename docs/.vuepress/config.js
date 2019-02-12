@@ -44,8 +44,8 @@ module.exports = {
           link: "/api/eases.md"
         }, 
         {
-          text: "Padding / Delays / Staggers",
-          link: "/api/pad.md"
+          text: "Delays and Staggers",
+          link: "/api/delays.md"
         },
       ]
     }],
