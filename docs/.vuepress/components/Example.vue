@@ -162,7 +162,7 @@ export default {
       type: Array
     },
     editable: {
-      default: true,
+      default: false,
       type: Boolean
     },
     defaultTabs: {
