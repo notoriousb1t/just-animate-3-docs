@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Guide | Just Animate 3</title>
+    <meta name="description" content="Just Animate Guide - Learn how to animate with style!">
+    <meta name="keywords" content="just-animate just-animate.js text animation css variables custom properties">
+  <meta property="og:title" content="Just Animate">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://just-animate.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:600,900i|Raleway:400,500,700">
+    
+    <link rel="preload" href="/just-animate-3-docs/assets/css/0.styles.2214a53e.css" as="style"><link rel="preload" href="/just-animate-3-docs/assets/js/app.eecef6b6.js" as="script"><link rel="preload" href="/just-animate-3-docs/assets/js/6.2ff0b7ce.js" as="script"><link rel="preload" href="/just-animate-3-docs/assets/js/2.496375c3.js" as="script"><link rel="prefetch" href="/just-animate-3-docs/assets/js/3.6552fc93.js"><link rel="prefetch" href="/just-animate-3-docs/assets/js/4.18b9980f.js"><link rel="prefetch" href="/just-animate-3-docs/assets/js/5.064ca4c7.js"><link rel="prefetch" href="/just-animate-3-docs/assets/js/7.09afbf19.js"><link rel="prefetch" href="/just-animate-3-docs/assets/js/8.29c8fd00.js">
+    <link rel="stylesheet" href="/just-animate-3-docs/assets/css/0.styles.2214a53e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/just-animate-3-docs/" class="home-link router-link-active"><!----> <span class="site-name">Just Animate 3</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Guides</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/guides/getting-started.html" class="nav-link router-link-exact-active router-link-active">Getting Started</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">API</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/api/eases.html" class="nav-link">Eases</a></li><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/api/delays.html" class="nav-link">Delays and Staggers</a></li></ul></div></div> <a href="https://github.com/just-animate/just-animate/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    View on GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Guides</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/guides/getting-started.html" class="nav-link router-link-exact-active router-link-active">Getting Started</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">API</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/api/eases.html" class="nav-link">Eases</a></li><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/api/delays.html" class="nav-link">Delays and Staggers</a></li></ul></div></div> <a href="https://github.com/just-animate/just-animate/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    View on GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/just-animate-3-docs/guides/getting-started.html#what-is-just-animate" class="sidebar-link">What is Just Animate?</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/just-animate-3-docs/guides/getting-started.html#get-started" class="sidebar-link">Get Started</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/just-animate-3-docs/guides/getting-started.html#fluent-syntax" class="sidebar-link">Fluent Syntax</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/guides/getting-started.html#json-syntax" class="sidebar-link">JSON Syntax</a></li></ul></li><li><a href="/just-animate-3-docs/guides/getting-started.html#installation" class="sidebar-link">Installation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/just-animate-3-docs/guides/getting-started.html#using-npm" class="sidebar-link">Using NPM</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/guides/getting-started.html#using-a-cdn" class="sidebar-link">Using a CDN</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/guides/getting-started.html#browser-support" class="sidebar-link">Browser Support</a></li></ul></li><li><a href="/just-animate-3-docs/guides/getting-started.html#api" class="sidebar-link">API</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="what-is-just-animate"><a href="#what-is-just-animate" aria-hidden="true" class="header-anchor">#</a> What is Just Animate?</h2> <p>Just Animate is a general purpose JavaScript animation library. It can animate HTML Elements and objects alike. At a high level, here are some of the most impressive features:</p> <ul><li>Tweens all transform properties (rotate, translate, scale, etc.)</li> <li>Morphs SVG paths</li> <li>Sub-timelines with the ability to use Web Animation API Animations as sub-timelines</li> <li>Full library of eases with <a href="/api/eases#ease-chaining">ease chaining</a> and <a href="/api/eases#custom-eases">custom eases</a></li> <li>Swappable animation targets and swappable keyframes even while the animation is running</li> <li>Fluent/builder and JSON API to provide a good experience for multiple programming styles</li> <li>Built to perform well under a heavy load and provide a smooth experience</li></ul> <h2 id="get-started"><a href="#get-started" aria-hidden="true" class="header-anchor">#</a> Get Started</h2> <h3 id="fluent-syntax"><a href="#fluent-syntax" aria-hidden="true" class="header-anchor">#</a> Fluent Syntax</h3> <p>The Fluent Syntax is used throughout much of the documentation because it is concise and easy to read.</p> <p><em>Shorthand Syntax</em>
+The shorthand syntax is useful for transition or fire-and-forget animations. The following code constructs a Timeline (which autoplays) and adds a keyframe at 1 second to spin the target by 360 degrees.</p> <div class="example-wrapper" style="height:200;"><div data-height="200" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><!----> <pre data-lang="html">&lt;div class='box'&gt;&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   justify-content: center;
+   height: 100vh;
+   overflow: hidden;
+}
+.box {
+   background: #6740c0;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 1000, { 
+   transform: 'rotate(360deg)',
+   $ease: 'power(in-out, 2)'
+});
+</pre></div></div> <p><em>Longhand Syntax</em>
+The longhand syntax is to construct a new Timeline and then call animate to configure the first tween. This syntax allows the Timeline to be configured at the same time as creation. the <code>.configure()</code> can also be used at any time to change the configuration.</p> <div class="example-wrapper" style="height:240;"><div data-height="240" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><!----> <pre data-lang="html">&lt;div class='box'&gt;&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   justify-content: center;
+   height: 100vh;
+   overflow: hidden;
+}
+.box {
+   background: #6740c0;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <pre data-lang="js">const t1 = 
+  new just.Timeline({ 
+    // playState: 'paused' 
+  })
+  .animate(&quot;.box&quot;, 1000, { 
+    transform: 'rotate(360deg)',
+    $ease: 'power(in-out, 2)'
+  });
+</pre></div></div> <h3 id="json-syntax"><a href="#json-syntax" aria-hidden="true" class="header-anchor">#</a> JSON Syntax</h3> <p>The JSON Syntax is useful for setting and replacing a timeline's configuration wholesale. It is most useful when programmatically updating a Timeline through automation or tooling.</p> <div class="example-wrapper" style="height:320;"><div data-height="320" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><!----> <pre data-lang="html">&lt;div class='box'&gt;&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   justify-content: center;
+   height: 100vh;
+   overflow: hidden;
+}
+.box {
+   background: #6740c0;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <pre data-lang="js">new just.Timeline({
+  keyframes: {
+    '.box': {
+      transform: {
+        1000: {
+          value: &quot;rotate(360deg)&quot;, 
+          $ease: 'power(in-out, 2)' 
+        }
+      }
+    }
+  }
+});
+</pre></div></div> <h2 id="installation"><a href="#installation" aria-hidden="true" class="header-anchor">#</a> Installation</h2> <h3 id="using-npm"><a href="#using-npm" aria-hidden="true" class="header-anchor">#</a> Using NPM</h3> <h3 id="using-a-cdn"><a href="#using-a-cdn" aria-hidden="true" class="header-anchor">#</a> Using a CDN</h3> <h3 id="browser-support"><a href="#browser-support" aria-hidden="true" class="header-anchor">#</a> Browser Support</h3> <h2 id="api"><a href="#api" aria-hidden="true" class="header-anchor">#</a> API</h2></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/just-animate/just-animate/edit/docs/guides/getting-started.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/just-animate-3-docs/assets/js/app.eecef6b6.js" defer></script><script src="/just-animate-3-docs/assets/js/6.2ff0b7ce.js" defer></script><script src="/just-animate-3-docs/assets/js/2.496375c3.js" defer></script>
+  </body>
+</html>

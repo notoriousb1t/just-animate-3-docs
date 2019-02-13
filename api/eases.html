@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Ease | Just Animate 3</title>
+    <meta name="description" content="Making Animation Simple">
+    <meta name="keywords" content="just-animate just-animate.js text animation css variables custom properties">
+  <meta property="og:title" content="Just Animate">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://just-animate.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:600,900i|Raleway:400,500,700">
+    <meta name="Eases" content="Just Animate Guide - Learn how to animate with style!">
+    <link rel="preload" href="/just-animate-3-docs/assets/css/0.styles.2214a53e.css" as="style"><link rel="preload" href="/just-animate-3-docs/assets/js/app.eecef6b6.js" as="script"><link rel="preload" href="/just-animate-3-docs/assets/js/5.064ca4c7.js" as="script"><link rel="preload" href="/just-animate-3-docs/assets/js/2.496375c3.js" as="script"><link rel="prefetch" href="/just-animate-3-docs/assets/js/3.6552fc93.js"><link rel="prefetch" href="/just-animate-3-docs/assets/js/4.18b9980f.js"><link rel="prefetch" href="/just-animate-3-docs/assets/js/6.2ff0b7ce.js"><link rel="prefetch" href="/just-animate-3-docs/assets/js/7.09afbf19.js"><link rel="prefetch" href="/just-animate-3-docs/assets/js/8.29c8fd00.js">
+    <link rel="stylesheet" href="/just-animate-3-docs/assets/css/0.styles.2214a53e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/just-animate-3-docs/" class="home-link router-link-active"><!----> <span class="site-name">Just Animate 3</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Guides</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/guides/getting-started.html" class="nav-link">Getting Started</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">API</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/api/eases.html" class="nav-link router-link-exact-active router-link-active">Eases</a></li><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/api/delays.html" class="nav-link">Delays and Staggers</a></li></ul></div></div> <a href="https://github.com/just-animate/just-animate/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    View on GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">Guides</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/guides/getting-started.html" class="nav-link">Getting Started</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">API</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/api/eases.html" class="nav-link router-link-exact-active router-link-active">Eases</a></li><li class="dropdown-item"><!----> <a href="/just-animate-3-docs/api/delays.html" class="nav-link">Delays and Staggers</a></li></ul></div></div> <a href="https://github.com/just-animate/just-animate/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    View on GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Ease</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/just-animate-3-docs/api/eases.html#eases" class="sidebar-link">Eases</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#back" class="sidebar-link">Back</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#bounce" class="sidebar-link">Bounce</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#cubic-bezier" class="sidebar-link">Cubic Bezier</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#elastic" class="sidebar-link">Elastic</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#power" class="sidebar-link">Power</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#repeat" class="sidebar-link">Repeat</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#sine" class="sidebar-link">Sine</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#steps" class="sidebar-link">Steps</a></li><li class="sidebar-sub-header"><a href="/just-animate-3-docs/api/eases.html#yoyo" class="sidebar-link">Yoyo</a></li></ul></li><li><a href="/just-animate-3-docs/api/eases.html#ease-chaining" class="sidebar-link">Ease Chaining</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/just-animate-3-docs/api/eases.html#custom-eases" class="sidebar-link">Custom Eases</a><ul class="sidebar-sub-headers"></ul></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="eases"><a href="#eases" aria-hidden="true" class="header-anchor">#</a> Eases</h2> <p>An ease allows the developer or designer the ability to change the rate at which the animation progresses. Having the right ease can be the difference between an unpleasant mechanical interaction or having a silky-smooth delightful interaction. Eases <a href="#ease-chaining">can be chained</a> and <a href="#custom-eases">custom eases</a> can be registered.</p> <p>Just Animate comes pre-built with the most common eases, many of which are not available in CSS.</p> <p>Many of the eases have &quot;in&quot;, &quot;out&quot;, and &quot;in-out&quot; options. The &quot;in&quot; option performs the effect at the beginning, the &quot;out&quot; performs it at the end, and &quot;in-out&quot; performs it both at the beginning and the end.</p> <h3 id="back"><a href="#back" aria-hidden="true" class="header-anchor">#</a> Back</h3> <p>Back moves past the boundary and then back to the boundary. For &quot;in&quot; it moves before the start before progressing.  For &quot;out&quot; it moves past the end before finishing. For &quot;in-out&quot; it does both &quot;in&quot; and &quot;out&quot;.</p> <p><em>Arguments</em></p> <ol><li><code>type</code>: in, out, or in-out. The default value is in.</li></ol> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 1050, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;back(out)&quot;
+});
+</pre></div></div> <h3 id="bounce"><a href="#bounce" aria-hidden="true" class="header-anchor">#</a> Bounce</h3> <p>Bounce produces a bouncing effect.</p> <p><em>Arguments</em></p> <ol><li><code>type</code>: in, out, or in-out. The default value is in.</li> <li><code>bounces</code>: default value is 7.5625</li></ol> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 1050, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;bounce(out)&quot;
+});
+</pre></div></div> <h3 id="cubic-bezier"><a href="#cubic-bezier" aria-hidden="true" class="header-anchor">#</a> Cubic Bezier</h3> <p>Cubic Bezier works the same way as it does in CSS: it has four control points that create a curve. Many eases can
+be produced with this function. See <a href="http://cubic-bezier.com" target="_blank" rel="noopener noreferrer">cubic-bezier.com<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> to try some of your own.</p> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 1050, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;cubic-bezier(.5, 0, .5, 1)&quot;
+});
+</pre></div></div> <h3 id="elastic"><a href="#elastic" aria-hidden="true" class="header-anchor">#</a> Elastic</h3> <p>Elastic appears to be made of rubber.</p> <p><em>Arguments</em></p> <ol><li><code>type</code>: in, out, or in-out. The default value is in.</li> <li><code>amplitude</code>: The default value is 1</li> <li><code>period</code>: The default value is 0.4</li> <li><code>bounces</code>: The default value is 4</li></ol> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 1050, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;elastic(out)&quot;
+});
+</pre></div></div> <h3 id="power"><a href="#power" aria-hidden="true" class="header-anchor">#</a> Power</h3> <p>Power provides many of the named eases that are often used in animation:</p> <ol><li>power(in, 1) = linear</li> <li>power(in, 2) = easeInQuad</li> <li>power(in, 3) = easeInCubic</li> <li>power(in, 4) = easeInQuart</li> <li>power(in, 5) = easeInQuint</li></ol> <p>Instead of providing named 12+ named eases, it is nicer to simply provide a power function so the relationship between eases is clear and easy to move between. Try changing the number in the example to move between eases or better yet, create your own power ease!</p> <p><em>Arguments</em></p> <ol><li><code>type</code>: in, out, or in-out. The default value is in.</li> <li><code>n</code>: The default value is 2.</li></ol> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 1050, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;power(out, 3)&quot;
+});
+</pre></div></div> <h3 id="repeat"><a href="#repeat" aria-hidden="true" class="header-anchor">#</a> Repeat</h3> <p>Repeat repeats a tween a certain number of times. While the Timeline has an <code>iterations</code> property for repeating the timeline, the repeat ease allows a developer or designer to subdivide a tween into repetions. Eases do not affect duration, so if the goal is to play the tween twice for 500ms, set the tween duration to 1000 and repeat twice.</p> <p><em>Arguments</em></p> <ol><li><code>count</code>: The default value is 2.</li></ol> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 1000, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;repeat(2)&quot;
+});
+</pre></div></div> <h3 id="sine"><a href="#sine" aria-hidden="true" class="header-anchor">#</a> Sine</h3> <p>Sine is a gentle ease function.</p> <p><em>Arguments</em></p> <ol><li><code>type</code>: in, out, or in-out. The default value is in.</li></ol> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 1000, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;sine(out)&quot;
+});
+</pre></div></div> <h3 id="steps"><a href="#steps" aria-hidden="true" class="header-anchor">#</a> Steps</h3> <p>Cubic Bezier works the same way as it does in CSS: it has a number of steps and a mode which indicates where the &quot;step&quot; is.</p> <p><em>Arguments</em></p> <ol><li><code>steps</code>: the number of steps</li> <li><code>mode</code>: start or end</li></ol> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 5000, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;steps(10, end)&quot;
+});
+</pre></div></div> <h3 id="yoyo"><a href="#yoyo" aria-hidden="true" class="header-anchor">#</a> Yoyo</h3> <p>Yoyo repeats and alternates a tween a certain number of times. While the Timeline has an <code>iterations</code> property for repeating the timeline and an <code>alternate</code> property to alternate, the yoyo ease allows a developer or designer to subdivide a tween into repetions that alternate. Eases do not affect duration, so if the goal is to move to a position and back 500ms in each direction, the developer or designer should set the duration to 1000 and yoyo twice.</p> <p><em>Arguments</em></p> <ol><li><code>count</code>: The default value is 2.</li></ol> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 2000, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;yoyo(4)&quot;
+});
+</pre></div></div> <h2 id="ease-chaining"><a href="#ease-chaining" aria-hidden="true" class="header-anchor">#</a> Ease Chaining</h2> <p>Just Animate has the unique ability to chain eases. Add more than one ease expressions separated by spaces and Just Animate will take the result from each ease and process it through the next ease. This is especially helpful when using yoyo, repeat, or creating a complex ease.</p> <div class="example-wrapper" style="height:220;"><div data-height="220" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.animate(&quot;.box&quot;, 2000, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;yoyo(2) sine(in-out)&quot;
+});
+</pre></div></div> <h2 id="custom-eases"><a href="#custom-eases" aria-hidden="true" class="header-anchor">#</a> Custom Eases</h2> <p>Registering a custom only requires adding a function to <code>eases</code>. The function should accept whatever arguments are needed to generate the ease function and then return an ease function in turn. Ease functions may be cached, so it is important that ease functions are pure and do not hand out different ease functions as a result of outside mutations. Here is an example of a custom power $ease:</p> <div class="example-wrapper" style="height:320;"><div data-height="320" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.eases.customPower = (n) =&gt; {
+  return o =&gt; {
+    return Math.pow(o, n);
+  }
+}
+
+just.animate(&quot;.box&quot;, 1050, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;customPower(7)&quot;
+});
+</pre></div></div> <p>Custom Eases can also be used to standardize eases across an application, for instance:</p> <div class="example-wrapper" style="height:320;"><div data-height="320" data-default-tab="js,result" data-prefill="{&quot;tags&quot;:[&quot;just-animate-3&quot;],&quot;scripts&quot;:[&quot;https://codepen.io/notoriousb1t/pen/e84f23c7867a47a050b3498b1031197e.js&quot;]}" data-theme-id="dark" data-preview="true" data-user="notoriousb1t" data-slug-hash="7ceecf00069895a2fa5de627e88df4f6" class="codepen"><pre data-lang="html">&lt;div class='alley'&gt;
+  &lt;div class='box'&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre> <pre data-lang="scss" data-option-autoprefixer>* {
+   box-sizing: border-box;
+   position: relative;
+}
+body {
+   align-items: center;
+   background: #333;
+   color: #efeeee;
+   display: flex;
+   font-family: Roboto, sans-serif;
+   font-size: 12px;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+}
+.alley {
+   background: #282828;
+   display: flex;
+   width: 100vw;
+   padding: 20px 5vw;
+}
+.box {
+   background: #77c7c4;
+   border-radius: 4px;
+   cursor: pointer;
+   height: 40px;
+   width: 40px;
+}
+</pre> <!----> <!----> <pre data-lang="js">just.eases.default = () =&gt; {
+  return just.eases['cubic-bezier'](0.5, 0, 0.5, 1);
+}
+
+just.animate(&quot;.box&quot;, 1050, {
+  transform: &quot;translate(80vw)&quot;,
+  $ease: &quot;default&quot;
+});
+</pre></div></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/just-animate/just-animate/edit/docs/api/eases.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/just-animate-3-docs/assets/js/app.eecef6b6.js" defer></script><script src="/just-animate-3-docs/assets/js/5.064ca4c7.js" defer></script><script src="/just-animate-3-docs/assets/js/2.496375c3.js" defer></script>
+  </body>
+</html>
